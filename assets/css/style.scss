@@ -5,6 +5,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+.flex-vertical {
+  display: flex;
+  flex-direction: column;
+}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -41,7 +45,7 @@
   }
 
   .container-texto {
-    flex-direction: column;
+    @extend .flex-vertical;
     height: 30%;
     padding: 20px;
     list-style: none;
@@ -49,6 +53,9 @@
     li p {
       margin-bottom: 10px;
       font-size: 25;
+      .color-tex {
+        color: #817c7c;
+      }
     }
   }
 }
@@ -68,18 +75,14 @@
     flex-wrap: wrap;
 
     .contenedor-img {
-      display: flex;
-      flex-direction: column;
+      @extend .flex-vertical;
       background-color: rgb(255, 255, 255);
       width: 300px;
       height: 350px;
       box-sizing: border-box;
 
       .card_body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
+        @extend .flex-center;
         overflow: hidden;
         transition: all 1s ease-in-out;
 
@@ -98,17 +101,14 @@
           }
           background-color: rgb(240, 235, 232);
         }
-      
       }
-    
+
       .card-texto {
         @extend .flex-center;
         flex-direction: column;
         color: black;
         margin-top: auto;
         margin-bottom: auto;
-
-
       }
       .card_footer {
         min-height: 30px;

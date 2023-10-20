@@ -5,7 +5,12 @@
   box-sizing: border-box;
 }
 
-.flex-center, .footer, .main-content .contener-cards .contenedor-img .card_footer, .main-content .contener-cards .contenedor-img .card-texto, .navbar {
+.flex-vertical, .main-content .contener-cards .contenedor-img, .sidebar .container-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center, .footer, .main-content .contener-cards .contenedor-img .card_footer, .main-content .contener-cards .contenedor-img .card-texto, .main-content .contener-cards .contenedor-img .card_body, .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,7 +42,6 @@
   font-size: 30px;
 }
 .sidebar .container-texto {
-  flex-direction: column;
   height: 30%;
   padding: 20px;
   list-style: none;
@@ -45,6 +49,9 @@
 .sidebar .container-texto li p {
   margin-bottom: 10px;
   font-size: 25;
+}
+.sidebar .container-texto li p .color-tex {
+  color: #817c7c;
 }
 
 .main-content {
@@ -62,17 +69,12 @@
   flex-wrap: wrap;
 }
 .main-content .contener-cards .contenedor-img {
-  display: flex;
-  flex-direction: column;
   background-color: rgb(255, 255, 255);
   width: 300px;
   height: 350px;
   box-sizing: border-box;
 }
 .main-content .contener-cards .contenedor-img .card_body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   overflow: hidden;
   transition: all 1s ease-in-out;
 }
