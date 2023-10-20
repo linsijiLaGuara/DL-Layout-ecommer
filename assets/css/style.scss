@@ -111,9 +111,10 @@
         margin-bottom: auto;
       }
       .card_footer {
+        @extend .flex-center;
         min-height: 30px;
         background-color: rgb(6, 43, 92);
-        @extend .flex-center;
+        
         color: aliceblue;
       }
     }
@@ -123,7 +124,7 @@
 .footer {
   grid-area: footer;
   background-color: rgb(6, 43, 92);
-  height: 50px;
   @extend .flex-center;
+  height: 50px;
   color: aliceblue;
 }
